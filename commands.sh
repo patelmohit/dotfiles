@@ -11,3 +11,7 @@ exiftool '-createdate<datetimeoriginal' -r -if '(not $createdate and $datetimeor
 exiftool -d '%Y-%m-%d %H.%M.%S%%-c.%%e' '-filename<CreateDate' .
 # Remove original files if you don't want to go back -yolo
 rm *original
+
+# mdadm - create a RAID 1 array from /dev/sda1 and /dev/sda2 (requires partitions to be created first)
+# the following guide details the steps for building the array: https://www.jeffgeerling.com/blog/2021/htgwa-create-raid-array-linux-mdadm
+sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sd[a-b]1
