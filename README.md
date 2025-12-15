@@ -1,2 +1,2 @@
 # dotfiles
-Useful scripts to make life in linux a lot easier :D
+Useful scripts to make life in a terminal a lot easier 🔥
